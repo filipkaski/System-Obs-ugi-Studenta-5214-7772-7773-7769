@@ -1,4 +1,4 @@
-package pl.SOS;
+package main.java.pl.SOS;
 
 /**
  * Hello world!
