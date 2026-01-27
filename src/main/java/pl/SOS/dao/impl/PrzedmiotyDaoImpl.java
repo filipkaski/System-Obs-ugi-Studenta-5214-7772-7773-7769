@@ -17,13 +17,13 @@ public class PrzedmiotyDaoImpl implements PrzedmiotyDao {
     }
 
     @Override
-    public void edytuj(Przedmioty student) {
+    public void edytuj(Przedmioty przedmioty) {
         entityManager.merge(przedmioty);
     }
 
     @Override
     public void usun(int id) {
-        Przedmioty student = pobierzPoId(id);
+        Przedmioty przedmioty = pobierzPoId(id);
         if (student != null) {
             entityManager.remove(przedmioty);
         }
