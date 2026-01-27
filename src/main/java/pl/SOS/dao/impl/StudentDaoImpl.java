@@ -17,6 +17,19 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
+    public void edytuj(Student student) {
+        entityManager.merge(student);
+    }
+
+    @Override
+    public void usun(int id) {
+        Student student = pobierzPoId(id);
+        if (student != null) {
+            entityManager.remove(student);
+        }
+    }
+
+    @Override
     public Student pobierzPoId(int id) {
         return entityManager.find(Student.class, id);
     }
@@ -25,19 +38,4 @@ public class StudentDaoImpl implements StudentDao {
     public List<Student> pobierzWszystkich() {
         return entityManager.createQuery("SELECT s FROM Student s", Student.class).getResultList();
     }
-
-    @Override
-    public void edytuj(Student student) {
-        entityManager.merge(student); 
-    }
-
-    @Override
-    public void usun(int id) {
-        Student student = pobierzPoId(id);
-        if (student != null) {
-            entityManager.remove(student); 
-        }
-    }
-    
-
 }
