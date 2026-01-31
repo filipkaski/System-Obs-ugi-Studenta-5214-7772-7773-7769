@@ -9,7 +9,7 @@ public interface OknoZapisowDao {
     void usun(int id);
     OknoZapisow pobierzPoId(int id);
     List<OknoZapisow> pobierzWszystkie();
-    List<OknoZapisow> pobierzAktywneOkna(double obecnyCzasTS);
+    List<OknoZapisow> pobierzAktywneOkna(LocalDateTime obecnyCzasTS);
     boolean czyStudentMaDostep(int studentId, int oknoId);
     List<OknoZapisow> pobierzOknaDlaSemestru(int semestr);
 }

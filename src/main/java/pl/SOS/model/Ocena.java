@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Oceny")
@@ -26,11 +27,11 @@ public class Ocena {
     @Column(name = "rodzaj")
     private String rodzaj;
     @Column(name = "data_wystawienia")
-    private double dataWystawienia;
+    private LocalDate dataWystawienia;
     @Column(name = "prowadzacy_id")
     private int prowadzacyID;
 
-    public Ocena(int id, int studentID, int przedmiotID, int semestr, String wartosc, int punkty, String rodzaj, double dataWystawienia, int prowadzacyID) {
+    public Ocena(int id, int studentID, int przedmiotID, int semestr, String wartosc, int punkty, String rodzaj, LocalDate dataWystawienia, int prowadzacyID) {
         this.id = id;
         this.studentID = studentID;
         this.przedmiotID = przedmiotID;
@@ -101,11 +102,11 @@ public class Ocena {
         this.rodzaj = rodzaj;
     }
 
-    public double getDataWystawienia() {
+    public LocalDate getDataWystawienia() {
         return dataWystawienia;
     }
 
-    public void setDataWystawienia(double dataWystawienia) {
+    public void setDataWystawienia(LocalDate dataWystawienia) {
         this.dataWystawienia = dataWystawienia;
     }
 

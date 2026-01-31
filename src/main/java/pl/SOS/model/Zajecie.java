@@ -5,11 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Zajecia")
 public class Zajecie {
-    public Zajecie(int id, int przedmiotID, int prowadzacyID, int salaID, String typ, dniTygodnia dzienTygodnia, double godzinaOd, double godzinaDo, int semestr, int limitMiejsc) {
+    public Zajecie(int id, int przedmiotID, int prowadzacyID, int salaID, String typ, dniTygodnia dzienTygodnia, LocalDate godzinaOd, LocalDate godzinaDo, int semestr, int limitMiejsc) {
         this.id = id;
         this.przedmiotID = przedmiotID;
         this.prowadzacyID = prowadzacyID;
@@ -73,19 +74,19 @@ public class Zajecie {
         this.dzienTygodnia = dzienTygodnia;
     }
 
-    public double getGodzinaOd() {
+    public LocalDate getGodzinaOd() {
         return godzinaOd;
     }
 
-    public void setGodzinaOd(double godzinaOd) {
+    public void setGodzinaOd(LocalDate godzinaOd) {
         this.godzinaOd = godzinaOd;
     }
 
-    public double getGodzinaDo() {
+    public LocalDate getGodzinaDo() {
         return godzinaDo;
     }
 
-    public void setGodzinaDo(double godzinaDo) {
+    public void setGodzinaDo(LocalDate godzinaDo) {
         this.godzinaDo = godzinaDo;
     }
 
@@ -122,9 +123,9 @@ public class Zajecie {
     @Column(name = "dzien_tygodnia")
     private dniTygodnia dzienTygodnia;
     @Column(name = "godzina_od")
-    private double godzinaOd;
+    private LocalDate godzinaOd;
     @Column(name = "godzina_do")
-    private double godzinaDo;
+    private LocalDate godzinaDo;
     @Column(name = "semestr")
     private int semestr;
     @Column(name = "limit_miejsc")

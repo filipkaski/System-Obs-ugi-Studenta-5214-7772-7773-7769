@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Zgody Prowdzacych")
@@ -20,11 +21,11 @@ public class ZgodaWykladowcy {
     @Column(name = "prowadzacy_id")
     private int prowadzacyID;
     @Column(name = "data_wydania")
-    private double dataWydania;
+    private LocalDateTime dataWydania;
     @Column(name = "uwagi")
     private String uwagi;
 
-    public ZgodaWykladowcy(int id, int studentID, int przedmiotID, int prowadzacyID, double dataWydania, String uwagi) {
+    public ZgodaWykladowcy(int id, int studentID, int przedmiotID, int prowadzacyID, LocalDate dataWydania, String uwagi) {
         this.id = id;
         this.studentID = studentID;
         this.przedmiotID = przedmiotID;
@@ -68,11 +69,11 @@ public class ZgodaWykladowcy {
         this.prowadzacyID = prowadzacyID;
     }
 
-    public double getDataWydania() {
+    public LocalDate getDataWydania() {
         return dataWydania;
     }
 
-    public void setDataWydania(double dataWydania) {
+    public void setDataWydania(LocalDate dataWydania) {
         this.dataWydania = dataWydania;
     }
 

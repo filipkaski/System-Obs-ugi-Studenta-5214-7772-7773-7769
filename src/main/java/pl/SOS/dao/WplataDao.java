@@ -10,6 +10,6 @@ public interface WplataDao {
     Wplata pobierzPoId(int id);
     List<Wplata> pobierzWszystkie();
     List<Wplata> pobierzWplatyStudenta(int studentId);
-    List<Wplata> pobierzWplatyZOkresu(double dataOd, double dataDo);
+    List<Wplata> pobierzWplatyZOkresu(LocalDateTime dataOd, LocalDateTime dataDo);
     double sumaWplatStudenta(int studentId);
 }
