@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Wplaty")
@@ -18,11 +19,11 @@ public class Wplata {
     @Column(name = "kwota")
     private double kwota;
     @Column(name = "data_wplaty")
-    private double dataWplaty;
+    private LocalDate dataWplaty;
     @Column(name = "referencja")
     private String referencja;
 
-    public Wplata(int id, int naleznoscID, double kwota, double dataWplaty, String referencja) {
+    public Wplata(int id, int naleznoscID, double kwota, LocalDate dataWplaty, String referencja) {
         this.id = id;
         this.naleznoscID = naleznoscID;
         this.kwota = kwota;
@@ -57,11 +58,11 @@ public class Wplata {
         this.kwota = kwota;
     }
 
-    public double getDataWplaty() {
+    public LocalDate getDataWplaty() {
         return dataWplaty;
     }
 
-    public void setDataWplaty(double dataWplaty) {
+    public void setDataWplaty(LocalDate dataWplaty) {
         this.dataWplaty = dataWplaty;
     }
 

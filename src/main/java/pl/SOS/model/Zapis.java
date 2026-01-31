@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Zapisy")
@@ -18,13 +19,13 @@ public class Zapis {
     @Column(name = "zajecia_id")
     private int zajeciaID;
     @Column(name = "data_zapisu")
-    private double dataZapisu;
+    private LocalDateTime dataZapisu;
     @Column(name = "status")
     private String Status;
     @Column(name = "zapisal_admin_id")
     private int zapisalAdminID;
 
-    public Zapis(int id, int studentID, int zajeciaID, double dataZapisu, String status, int zapisalAdminID) {
+    public Zapis(int id, int studentID, int zajeciaID, LocalDate dataZapisu, String status, int zapisalAdminID) {
         this.id = id;
         this.studentID = studentID;
         this.zajeciaID = zajeciaID;
@@ -60,11 +61,11 @@ public class Zapis {
         this.zajeciaID = zajeciaID;
     }
 
-    public double getDataZapisu() {
+    public LocalDate getDataZapisu() {
         return dataZapisu;
     }
 
-    public void setDataZapisu(double dataZapisu) {
+    public void setDataZapisu(LocalDate dataZapisu) {
         this.dataZapisu = dataZapisu;
     }
 

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Naleznosci")
@@ -20,13 +21,13 @@ public class Naleznosc {
     @Column(name = "kwota")
     private double kwota;
     @Column(name = "termin")
-    private double termin;
+    private LocalDate termin;
     @Column(name = "status")
     private String status;
     @Column(name = "opis")
     private String opis;
 
-    public Naleznosc(int id, int studentID, String typ, double kwota, double termin, String status, String opis) {
+    public Naleznosc(int id, int studentID, String typ, double kwota, LocalDate termin, String status, String opis) {
         this.id = id;
         this.studentID = studentID;
         this.typ = typ;
@@ -71,11 +72,11 @@ public class Naleznosc {
         this.kwota = kwota;
     }
 
-    public double getTermin() {
+    public LocalDate getTermin() {
         return termin;
     }
 
-    public void setTermin(double termin) {
+    public void setTermin(LocalDate termin) {
         this.termin = termin;
     }
 

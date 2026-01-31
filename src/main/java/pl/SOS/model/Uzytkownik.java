@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Uzytkownicy")
@@ -20,15 +21,15 @@ public class Uzytkownik {
     @Column(name = "status")
     private String status;
     @Column(name = "data_utworzenia")
-    private double dataUtworzenia;
+    private LocalDateTime dataUtworzenia;
     @Column(name = "ostatnie_logowanie")
-    private double ostatnieLogowanie;
+    private LocalDateTime ostatnieLogowanie;
     @Column(name = "nieudane_logowania")
     private int nieudaneLogowania;
     @Column(name = "blokada_do")
-    private double blokadaDo;
+    private LocalDateTime blokadaDo;
 
-    public Uzytkownik(int id, String email, String hasloHash, String status, double dataUtworzenia, double ostatnieLogowanie, int nieudaneLogowania, double blokadaDo) {
+    public Uzytkownik(int id, String email, String hasloHash, String status, LocalDate dataUtworzenia, LocalDate ostatnieLogowanie, int nieudaneLogowania, LocalDate blokadaDo) {
         this.id = id;
         this.email = email;
         this.hasloHash = hasloHash;
@@ -74,19 +75,19 @@ public class Uzytkownik {
         this.status = status;
     }
 
-    public double getDataUtworzenia() {
+    public LocalDate getDataUtworzenia() {
         return dataUtworzenia;
     }
 
-    public void setDataUtworzenia(double dataUtworzenia) {
+    public void setDataUtworzenia(LocalDate dataUtworzenia) {
         this.dataUtworzenia = dataUtworzenia;
     }
 
-    public double getOstatnieLogowanie() {
+    public LocalDate getOstatnieLogowanie() {
         return ostatnieLogowanie;
     }
 
-    public void setOstatnieLogowanie(double ostatnieLogowanie) {
+    public void setOstatnieLogowanie(LocalDate ostatnieLogowanie) {
         this.ostatnieLogowanie = ostatnieLogowanie;
     }
 
@@ -98,11 +99,11 @@ public class Uzytkownik {
         this.nieudaneLogowania = nieudaneLogowania;
     }
 
-    public double getBlokadaDo() {
+    public LocalDate getBlokadaDo() {
         return blokadaDo;
     }
 
-    public void setBlokadaDo(double blokadaDo) {
+    public void setBlokadaDo(LocalDate blokadaDo) {
         this.blokadaDo = blokadaDo;
     }
 }

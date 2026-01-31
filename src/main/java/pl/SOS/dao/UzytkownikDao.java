@@ -11,6 +11,6 @@ public interface UzytkownikDao {
     List<Uzytkownik> pobierzWszystkie();
     Uzytkownik znajdzPoEmail(String email);
     void aktualizujNieudaneLogowania(int id, int liczba);
-    void zablokujKonto(int id, double czasBlokady);
+    void zablokujKonto(int id, LocalDateTime czasBlokady);
     boolean sprawdzDostepnoscEmail(String email);
 }

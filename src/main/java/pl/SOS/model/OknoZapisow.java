@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Okna Zapisow")
@@ -16,13 +17,13 @@ public class OknoZapisow {
     @Column(name = "semestr")
     private int semetr;
     @Column(name = "start_ts")
-    private double startTS;
+    private LocalDateTime startTS;
     @Column(name = "koniec_ts")
-    private double koniecTS;
+    private LocalDateTime koniecTS;
     @Column(name = "opis")
     private String opis;
 
-    public OknoZapisow(int id, int semetr, double startTS, double koniecTS, String opis) {
+    public OknoZapisow(int id, int semetr, LocalDate startTS, LocalDate koniecTS, String opis) {
         this.id = id;
         this.semetr = semetr;
         this.startTS = startTS;
@@ -49,19 +50,19 @@ public class OknoZapisow {
         this.semetr = semetr;
     }
 
-    public double getStartTS() {
+    public LocalDate getStartTS() {
         return startTS;
     }
 
-    public void setStartTS(double startTS) {
+    public void setStartTS(LocalDate startTS) {
         this.startTS = startTS;
     }
 
-    public double getKoniecTS() {
+    public LocalDate getKoniecTS() {
         return koniecTS;
     }
 
-    public void setKoniecTS(double koniecTS) {
+    public void setKoniecTS(LocalDate koniecTS) {
         this.koniecTS = koniecTS;
     }
 

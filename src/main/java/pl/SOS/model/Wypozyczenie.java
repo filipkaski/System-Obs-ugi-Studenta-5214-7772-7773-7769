@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Wypozyczenia")
@@ -18,11 +19,11 @@ public class Wypozyczenie {
     @Column(name = "ksiazka_id")
     private int ksiazkaID;
     @Column(name = "data_wypozyczenia")
-    private double dataWypozyczenia;
+    private LocalDate dataWypozyczenia;
     @Column(name = "temin_zwrotu")
-    private double terminZwrotu;
+    private LocalDate terminZwrotu;
     @Column(name = "data_zwrotu")
-    private double dataZwrotu;
+    private LocalDate dataZwrotu;
     @Column(name = "status")
     private String status;
 
@@ -34,27 +35,27 @@ public class Wypozyczenie {
         this.status = status;
     }
 
-    public double getDataZwrotu() {
+    public LocalDate getDataZwrotu() {
         return dataZwrotu;
     }
 
-    public void setDataZwrotu(double dataZwrotu) {
+    public void setDataZwrotu(LocalDate dataZwrotu) {
         this.dataZwrotu = dataZwrotu;
     }
 
-    public double getTerminZwrotu() {
+    public LocalDate getTerminZwrotu() {
         return terminZwrotu;
     }
 
-    public void setTerminZwrotu(double terminZwrotu) {
+    public void setTerminZwrotu(LocalDate terminZwrotu) {
         this.terminZwrotu = terminZwrotu;
     }
 
-    public double getDataWypozyczenia() {
+    public LocalDate getDataWypozyczenia() {
         return dataWypozyczenia;
     }
 
-    public void setDataWypozyczenia(double dataWypozyczenia) {
+    public void setDataWypozyczenia(LocalDate dataWypozyczenia) {
         this.dataWypozyczenia = dataWypozyczenia;
     }
 
@@ -83,7 +84,7 @@ public class Wypozyczenie {
     }
 
 
-    public Wypozyczenie(int id, int studentID, int ksiazkaID, double dataWypozyczenia, double terminZwrotu, double dataZwrotu, String status) {
+    public Wypozyczenie(int id, int studentID, int ksiazkaID, LocalDate dataWypozyczenia, LocalDate terminZwrotu, LocalDate dataZwrotu, String status) {
         this.id = id;
         this.studentID = studentID;
         this.ksiazkaID = ksiazkaID;
