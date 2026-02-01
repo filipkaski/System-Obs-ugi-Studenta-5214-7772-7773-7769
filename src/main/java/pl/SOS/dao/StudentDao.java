@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Student;
+import pl.SOS.model.Student;
 
 public interface StudentDao {
     void dodaj(Student student);

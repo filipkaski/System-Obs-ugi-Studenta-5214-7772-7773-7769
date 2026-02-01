@@ -1,4 +1,4 @@
-package main.java.pl.SOS.model;
+package pl.SOS.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +21,7 @@ public class ZgodaWykladowcy {
     @Column(name = "prowadzacy_id")
     private int prowadzacyID;
     @Column(name = "data_wydania")
-    private LocalDateTime dataWydania;
+    private LocalDate dataWydania;
     @Column(name = "uwagi")
     private String uwagi;
 

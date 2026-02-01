@@ -1,10 +1,11 @@
-package main.java.pl.SOS.model;
+package pl.SOS.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,9 +18,9 @@ public class OknoZapisow {
     @Column(name = "semestr")
     private int semetr;
     @Column(name = "start_ts")
-    private LocalDateTime startTS;
+    private LocalDate startTS;
     @Column(name = "koniec_ts")
-    private LocalDateTime koniecTS;
+    private LocalDate koniecTS;
     @Column(name = "opis")
     private String opis;
 

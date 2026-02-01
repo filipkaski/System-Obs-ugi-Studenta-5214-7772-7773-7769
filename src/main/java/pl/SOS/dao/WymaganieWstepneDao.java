@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.WymaganieWstepne;
+import pl.SOS.model.WymaganieWstepne;
 
 public interface WymaganieWstepneDao {
     void dodaj(WymaganieWstepne wymaganie);

@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Wykladowca;
+import pl.SOS.model.Wykladowca;
 
 public interface WykladowcaDao {
     void dodaj(Wykladowca wykladowca);

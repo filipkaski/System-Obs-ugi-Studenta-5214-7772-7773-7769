@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Przedmiot;
+import pl.SOS.model.Przedmiot;
 
 public interface PrzedmiotDao {
     void dodaj(Przedmiot przedmiot);

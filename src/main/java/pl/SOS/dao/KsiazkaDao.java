@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Ksiazka;
+import pl.SOS.model.Ksiazka;
 
 public interface KsiazkaDao {
     void save(Ksiazka ksiazka);

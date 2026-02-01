@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao.impl;
+package pl.SOS.dao.impl;
 
-import main.java.pl.SOS.dao.PrzedmiotyDao;
-import main.java.pl.SOS.model.Przedmioty;
+import pl.SOS.dao.PrzedmiotyDao;
+import pl.SOS.model.Przedmioty;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;

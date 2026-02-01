@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao.impl;
+package pl.SOS.dao.impl;
 
-import main.java.pl.SOS.dao.StudentDao;
-import main.java.pl.SOS.model.Student;
+import pl.SOS.dao.StudentDao;
+import pl.SOS.model.Student;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;

@@ -1,7 +1,8 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
+import java.time.LocalDate;
 import java.util.List;
-import main.java.pl.SOS.model.Uzytkownik;
+import pl.SOS.model.Uzytkownik;
 
 public interface UzytkownikDao {
     void dodaj(Uzytkownik uzytkownik);
@@ -11,6 +12,6 @@ public interface UzytkownikDao {
     List<Uzytkownik> pobierzWszystkie();
     Uzytkownik znajdzPoEmail(String email);
     void aktualizujNieudaneLogowania(int id, int liczba);
-    void zablokujKonto(int id, LocalDateTime czasBlokady);
+    void zablokujKonto(int id, LocalDate czasBlokady);
     boolean sprawdzDostepnoscEmail(String email);
 }

@@ -1,4 +1,4 @@
-package main.java.pl.SOS.model;
+package pl.SOS.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,13 +21,13 @@ public class Uzytkownik {
     @Column(name = "status")
     private String status;
     @Column(name = "data_utworzenia")
-    private LocalDateTime dataUtworzenia;
+    private LocalDate dataUtworzenia;
     @Column(name = "ostatnie_logowanie")
-    private LocalDateTime ostatnieLogowanie;
+    private LocalDate ostatnieLogowanie;
     @Column(name = "nieudane_logowania")
     private int nieudaneLogowania;
     @Column(name = "blokada_do")
-    private LocalDateTime blokadaDo;
+    private LocalDate blokadaDo;
 
     public Uzytkownik(int id, String email, String hasloHash, String status, LocalDate dataUtworzenia, LocalDate ostatnieLogowanie, int nieudaneLogowania, LocalDate blokadaDo) {
         this.id = id;

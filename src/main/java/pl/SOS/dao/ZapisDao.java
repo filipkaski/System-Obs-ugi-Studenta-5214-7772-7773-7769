@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Zapis;
+import pl.SOS.model.Zapis;
 
 public interface ZapisDao {
     void dodaj(Zapis zapis);

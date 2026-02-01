@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Ocena;
+import pl.SOS.model.Ocena;
 
 public interface OcenaDao {
     void dodaj(Ocena ocena);

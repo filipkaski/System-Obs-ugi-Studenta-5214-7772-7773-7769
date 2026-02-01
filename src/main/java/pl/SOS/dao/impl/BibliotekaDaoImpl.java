@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao.impl;
+package pl.SOS.dao.impl;
 
-import main.java.pl.SOS.dao.BibliotekaDao;
-import main.java.pl.SOS.model.Biblioteka;
+import pl.SOS.dao.BibliotekaDao;
+import pl.SOS.model.Biblioteka;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
