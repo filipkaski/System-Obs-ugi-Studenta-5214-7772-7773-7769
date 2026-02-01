@@ -1,7 +1,8 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
+import java.time.LocalDate;
 import java.util.List;
-import main.java.pl.SOS.model.OknoZapisow;
+import pl.SOS.model.OknoZapisow;
 
 public interface OknoZapisowDao {
     void dodaj(OknoZapisow okno);
@@ -9,7 +10,7 @@ public interface OknoZapisowDao {
     void usun(int id);
     OknoZapisow pobierzPoId(int id);
     List<OknoZapisow> pobierzWszystkie();
-    List<OknoZapisow> pobierzAktywneOkna(LocalDateTime obecnyCzasTS);
+    List<OknoZapisow> pobierzAktywneOkna(LocalDate obecnyCzasTS);
     boolean czyStudentMaDostep(int studentId, int oknoId);
     List<OknoZapisow> pobierzOknaDlaSemestru(int semestr);
 }

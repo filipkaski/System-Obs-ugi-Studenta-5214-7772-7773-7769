@@ -1,4 +1,4 @@
-package main.java.pl.SOS.model;
+package pl.SOS.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

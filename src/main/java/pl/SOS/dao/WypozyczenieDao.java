@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Wypozyczenie;
+import pl.SOS.model.Wypozyczenie;
 
 public interface WypozyczenieDao {
     void dodaj(Wypozyczenie wypozyczenie);

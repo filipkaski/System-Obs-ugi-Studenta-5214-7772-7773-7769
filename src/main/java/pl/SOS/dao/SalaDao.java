@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Sala;
+import pl.SOS.model.Sala;
 
 public interface SalaDao {
     void dodaj(Sala sala);

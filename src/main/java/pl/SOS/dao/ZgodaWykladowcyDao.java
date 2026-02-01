@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.ZgodaWykladowcy;
+import pl.SOS.model.ZgodaWykladowcy;
 
 public interface ZgodaWykladowcyDao {
     void dodaj(ZgodaWykladowcy zgoda);

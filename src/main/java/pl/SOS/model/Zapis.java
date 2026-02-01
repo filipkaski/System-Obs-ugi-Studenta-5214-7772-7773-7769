@@ -1,4 +1,4 @@
-package main.java.pl.SOS.model;
+package pl.SOS.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +19,7 @@ public class Zapis {
     @Column(name = "zajecia_id")
     private int zajeciaID;
     @Column(name = "data_zapisu")
-    private LocalDateTime dataZapisu;
+    private LocalDate dataZapisu;
     @Column(name = "status")
     private String Status;
     @Column(name = "zapisal_admin_id")

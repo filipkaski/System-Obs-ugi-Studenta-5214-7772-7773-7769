@@ -1,7 +1,7 @@
-package main.java.pl.SOS.dao;
+package pl.SOS.dao;
 
 import java.util.List;
-import main.java.pl.SOS.model.Naleznosc;
+import pl.SOS.model.Naleznosc;
 
 public interface NaleznoscDao {
     void dodaj(Naleznosc naleznosc);
