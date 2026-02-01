@@ -38,4 +38,36 @@ public class StudentDaoImpl implements StudentDao {
     public List<Student> pobierzWszystkich() {
         return entityManager.createQuery("SELECT s FROM Student s", Student.class).getResultList();
     }
+
+    @Override
+    public Student znajdzPoNrIndeksu(int nrIndeksu) {
+        return entityManager.createQuery("SELECT s FROM Student s WHERE s.nrIndeksu = :nr", Student.class)
+                .setParameter("nr", nrIndeksu)
+                .getSingleResult();
+
+    }
+
+    public Student znajdzPoUzytkowniku(int uzytkownikID) {
+            return entityManager.createQuery("SELECT s FROM Student s WHERE s.uzytkownik.id = :uid", Student.class)
+                    .setParameter("uid", uzytkownikID)
+                    .getSingleResult();
+    }
+
+    @Override
+    public List<Student> pobierzPoKierunku(String kierunek) {
+        return entityManager.createQuery(
+                        "SELECT s FROM Student s WHERE s.kierunek = :k",
+                        Student.class)
+                .setParameter("k", kierunek)
+                .getResultList();
+    }
+
+    @Override
+    public List<Student> pobierzPoRoku(int rok) {
+        return entityManager.createQuery(
+                        "SELECT s FROM Student s WHERE s.rok = :r",
+                        Student.class)
+                .setParameter("r", rok)
+                .getResultList();
+    }
 }

@@ -8,7 +8,7 @@ public interface StudentDao {
     void edytuj(Student student);
     void usun(int id);
     Student pobierzPoId(int id);
-    List<Student> pobierzWszystkie();
+    List<Student> pobierzWszystkich();
     Student znajdzPoNrIndeksu(int nrIndeksu);
     Student znajdzPoUzytkowniku(int uzytkownikID);
     List<Student> pobierzPoKierunku(String kierunek);
